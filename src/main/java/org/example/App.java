@@ -1,13 +1,32 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
-public class App 
+class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        Rectangle rectangle = new Rectangle(4, 5);
+        Square square = new Square(4);
+        Circle circle = new Circle(3);
+
+
+        DrawingTool drawingTool = new DrawingTool();
+
+        drawingTool.addShape(rectangle);
+        drawingTool.addShape(square);
+        drawingTool.addShape(circle);
+        drawingTool.addShape(rectangle);
+
+        if (!drawingTool.addShape(rectangle)) {
+            System.out.println("This shape already exists.");
+        }
+
+        double totalPerimeter = drawingTool.getTotalPerimeter();
+        double totalSurface = drawingTool.getTotalArea();
+
+        System.out.println("Total Perimeter: " + totalPerimeter);
+        System.out.println("Total Surface: " + totalSurface);
     }
 }
+
+
