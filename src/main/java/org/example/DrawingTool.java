@@ -33,7 +33,7 @@ public class DrawingTool {
         return totalPerimeter;
     }
 
-    public double getTotalSurface() {
+    public double getTotalArea() {
         double totalSurface = 0.0;
 
         for (Shape shape : shapes) {

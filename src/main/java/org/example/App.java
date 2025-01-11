@@ -22,7 +22,7 @@ class App
         }
 
         double totalPerimeter = drawingTool.getTotalPerimeter();
-        double totalSurface = drawingTool.getTotalSurface();
+        double totalSurface = drawingTool.getTotalArea();
 
         System.out.println("Total Perimeter: " + totalPerimeter);
         System.out.println("Total Surface: " + totalSurface);
